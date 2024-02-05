@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --bright-orange: hsla(31, 77%, 52%, 1);
+  --dark-cyan: hsla(184, 100%, 22%, 1);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --para: hsla(0, 0%, 100%, 0.75);
+  --bg-head-btn: hsl(0, 0%, 95%);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: var(--bg-head-btn);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lexend Deca", sans-serif;
+  
+}
+
+.wrapper {
+  width: fit-content;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 85%;
+  margin: 30px 0;
+}
+
+
+.wrapper .sedans {
+  background: var(--bright-orange);
+  border-radius: 5px 5px 0 0;
+}
+
+.wrapper .suvs {
+  background: var(--dark-cyan);
+}
+
+.wrapper .luxury {
+  background: var(--very-dark-cyan);
+  border-radius: 0 0 5px 5px;
+}
+
+.wrapper .card h2 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  font-size: 2.1rem;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.wrapper .card p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--para);
+}
+
+.wrapper .card {
+  padding: 40px;
+}
+
+
+.wrapper .card .btn {
+  font-family: "Lexend Deca", sans-serif;
+  padding: 12px 26px;
+  border-radius: 30px;
+  outline: none;
+  border: 2px solid var(--bg-head-btn);
+  background: var(--bg-head-btn);
+  user-select: none;
+  margin-top: 10px;
+}
+
+.wrapper .card button:active {
+  background: transparent;
+  border: 2px solid var(--bg-head-btn);
+  color: var(--bg-head-btn);
+}
+
+.card .sedans-btn {
+  color: var(--bright-orange);
+}
+
+.card .suvs-btn {
+  color: var(--dark-cyan);
+}
+
+.card .luxury-btn {
+  color: var(--very-dark-cyan);
+}
+
+body .attribution {
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+body .attribution a {
+  color: #333333;
+}
+@media screen and (min-width: 900px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    align-items: center;
+  }
+  
+  .wrapper .luxury {
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .wrapper .sedans {
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .wrapper .card .btn {
+    margin-top: 60px;
+  }
+}
